@@ -11,6 +11,10 @@ document.querySelectorAll('a').forEach(link => {
 // returned een nodelist met alle anchors erin
 const anchorLists = document.querySelectorAll('a');
 
+const options = {
+    threshold: 0.1,
+}
+
 //  entries returned een array met alle oberserving elements
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -18,7 +22,7 @@ const observer = new IntersectionObserver(entries => {
         if (!entry.isIntersecting) {
             return;
         }
-        console.log(entry)
+        console.log(entry);
         // if(entry.target.id == 'header'){
         //     console.log('dit is de header')
         //     anchorLists[0].classList.add('active');
@@ -51,11 +55,11 @@ const observer = new IntersectionObserver(entries => {
                 anchorLists[3].classList.add('active');
                 break;
         }
-    })
-})
+    });
+}, options);
 
 // dit is wat je wilt observeren (error zonder foreach, heeft te maken met nodelist queryselectorAll)
-let sections = document.querySelectorAll('section')
+let sections = document.querySelectorAll('section');
 sections.forEach(section => {
     observer.observe(section);
 });
