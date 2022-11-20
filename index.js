@@ -8,6 +8,68 @@ document.querySelectorAll('a').forEach(link => {
         this.classList.add('active');
     })
 })
+// returned een nodelist met alle anchors erin
+const anchorLists = document.querySelectorAll('a');
+
+//  entries returned een array met alle oberserving elements
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        // added return so it doesnt clip back
+        if (!entry.isIntersecting) {
+            return;
+        }
+        console.log(entry)
+        // if(entry.target.id == 'header'){
+        //     console.log('dit is de header')
+        //     anchorLists[0].classList.add('active');
+        // }else{
+        //     anchorLists[0].classList.remove('active');
+        // }
+        switch (entry.target.id) {
+            case 'header':
+                anchorLists[0].classList.add('active');
+                anchorLists[1].classList.remove('active');
+                anchorLists[2].classList.remove('active');
+                anchorLists[3].classList.remove('active');
+                break;
+            case 'logo':
+                anchorLists[0].classList.remove('active');
+                anchorLists[1].classList.add('active');
+                anchorLists[2].classList.remove('active');
+                anchorLists[3].classList.remove('active');
+                break;
+            case 'kleur':
+                anchorLists[0].classList.remove('active');
+                anchorLists[1].classList.remove('active');
+                anchorLists[2].classList.add('active');
+                anchorLists[3].classList.remove('active');
+                break;
+            case 'formulieren':
+                anchorLists[0].classList.remove('active');
+                anchorLists[1].classList.remove('active');
+                anchorLists[2].classList.remove('active');
+                anchorLists[3].classList.add('active');
+                break;
+        }
+    })
+})
+
+// dit is wat je wilt observeren (error zonder foreach, heeft te maken met nodelist queryselectorAll)
+let sections = document.querySelectorAll('section')
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// // functie wordt uitgevoerd wanneer je scrollt
+// window.onscroll = function () {
+//     console.log(window.scrollY);
+//     if (window.scrollY > 480 && window.scrollY < 800) {
+//        anchorLists[0].classList.add('active')
+//     }else{
+//         anchorLists[0].classList.remove('active')
+//     }
+// }
+
 // ICons
 const simpelIcons = [
     'https://buurtcampusoost.duneyasaleh.com/public/image/stekjes_ruilen.png',
