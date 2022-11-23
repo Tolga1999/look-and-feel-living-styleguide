@@ -1,60 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Projectnaam] living styleguide</title>
+  <title>Plantswap Styleguide V1.0</title>
+  <link rel="icon" type="image/x-icon" href="/assets/tijdelijkeFavicon.png">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
-    <img class="logoTemplate" src="assets/logoTemplate.png" alt="logo">
-    <h1>Plantswap styleguide v0.1</h1>
+    <div class="logo-en-tekst">
+      <a href="#">
+        <img class="logo-template" src="assets/plantswap-logo-white.png" alt="logo">
+      </a>
+      <p>Styleguide V1.0</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#header" class="active">Header</a></li>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#kleur">Kleur</a></li>
+        <li><a href="#formulieren">Formulieren</a></li>
+        <li><a href="#responsive">Responsive</a></li>
+        <li><a href="#beeldgebruik">Beeldgebruik</a></li>
+        <li><a href="#typografie">Typografie</a></li>
+        <li><a href="#icons">Icons</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#footer">Footer</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#heading1" class="active">Responsive</a></li>
-      <li><a href="#heading2">Heading2</a></li>
-      <li><a href="#heading3">Heading3</a></li>
-      <li><a href="#heading4">Heading4</a></li>
-      <li><a href="#heading5">Heading5</a></li>
-    </ul>
-  </nav>
 
   <main>
-    <section id="heading1">
-      <h2>Responsive bij lagere resoluties</h2>
-      <h3>Interactieve Elementen</h3>
-      <h4>Wel doen</h4>
-      <p>Maak van de tab/menu een button die in en uitgeschoven kan worden.</p>
-      <p>Behou grofweg dezelfde layout van de website.</p>
-      <br>
-  
+    <section class="section-introduction">
+      <h1 class="h1-introduction">Styleguide Plantswap V1.0</h1>
+      <p>Dit is de styleguide gemaakt voor Plantswap. Een living styleguide biedt consistentie tussen merkuitingen, het
+        is een referentiekader voor je team en nieuwe ontwerpers/developers kunnen sneller aan de slag met een goede
+        merkreferentie.
+      </p>
+      <p>
+        Belangrijke punten: 
+        <ul class="important-introduction">
+          <li>Het is naslagwerk, dus makkelijk en snel.</li>
+          <li>Een merk ontwikkelt, dus moet de styleguide up-to-date gehouden worden.</li>
+        </ul>
+      </p>
+    </section>
+
+    <section id="header">
+      <h2>Header</h2>
+
+      <h3>Header</h3>
+      <h4>Wel doen: desktop versie</h4>
+      <p>
+        <img src="./assets/headerdesktop.png" class="fotos-header-onderdeel-desktop">
+
+        <p>Op de desktopversie staat het logo van de buurtcampus links en het menu naar de andere webpaginas van de
+          buurtcampus rechts. </p>
+
+        <img src="./assets/headerdesktop-geselecteerd.png" class="fotos-header-onderdeel-desktop">
+        <p>De links naar de verschillende webpaginas zijn in het lettertype Arial en bold, de kleur van de links is de
+          blauwe kleur uit de huisstijl als niet op een pagina, de oranje als je op een specifieke van deze paginas zit.
+        </p>
+        De font-size van de links is 16px.
+      </p>
+      <img src="./assets/headerdesktop - padding.png" class="fotos-header-onderdeel-desktop">
+      <p>Boven en onder het menu en het logo zit een padding van 25px.</p>
+
+
+      <h4>Wel doen: mobiele versie</h4>
+
+      <img src="./assets/headermobiel.png">
+      <img src="./assets/headermobieluitgeklapt.png">
+      <p> Net als in de desktopvertie zit er een padding onder en boven het logo en de drie streepjes onder elkaar
+        waarmee je het menu opent.</p>
+      <p>In de mobiele versie is het menu in de vorm van een uitklapmenu. Dit menu is, wanneer geopend, het blauw van de
+        huisstijl met witte letters.
+        Het lettertype is Arial en bold.</p>
+      <p> De font-size van de links is 16px. </p>
+      <img src="./assets/headermobieluitgeklapt-padding.png" class="fotos-header-onderdeel-desktop">
+      <p>Aan de linkerkant van de menu items is een padding van 20px.</p>
+      <img src="./assets/headermobieluitgeklapt-geselecteerd.png">
+      <p>Als je op een van de webpaginas zit, wordt de link van die pagina de oranje van de huisstijl.</p>
+
       <h4>Niet doen</h4>
       <p>Behoud niet de hele nav, hierdoor nemt het te veel ruimte in.</p>
       <p>Maak niet een volledig andere layout zodat het niet een heel andere website is op lagere resoluties. </p>
     </section>
 
-    <section id="heading2">
-      <h2>Responsive bij lagere resoluties</h2>
+    <section id="logo">
+      <h2>Logo</h2>
+      <img src="/assets/logoTemplate.png">
+      <h3>Plantswap Logo</h3>
+      <p>Het logo zorgt ervoor dat de bezoekers weten...
+        Het logo moet duidelijk zichtbaar en goed leesbaar zijn.
 
-      <h3>Layout</h3>
-      <h4>Wel doen</h4>
-      <p>Maak de ruimte die de afbeeldingen innemen kleiner, verwijder zonodig een aantal afbeeldingen.</p>
-      <p>@media screen and (max-width: 480px) 
-        Gebruik voor de media-query max-width. Hierbij is de max-width voor mobile 480px.  </p>
-      <br>
-
-      <h4>Niet doen</h4>
-      <p>Meerdere afbeeldingen naast elkaar zetten in de breedte, anders maken afbeeldingen een te groot deel uit van de pagina.</p>
-      <p>@media screen and (min-width: 769px) 
-        Gebruik geen min-width, anders komt het niet overeen met de andere media-query's
+        Voor het Plantswap logo is de letterstijl van het logo van Buurtcampus Oost aangehouden.
+        Hierdoor blijft Plantswap voor bezoekers herkenbaar als project van Buurcampus Oost.
+        Om het logo beter te laten aansluiten bij het planten thema, is gekozen voor de kleur groen (#224D12)
       </p>
+
+      <h3>Bij desktop gebruik</h3>
+      <h4>Logo</h4>
+      <p>De aanbevolen minimum grootte voor het plantswap logo op desktop is … pixels hoog.</p>
+      <h4>Favicon</h4>
+      <p>Het icoon dat in het tabblad zichtbaar is laat … zien.</p>
+
+      <h3>Header</h3>
+      <h4>Wel doen</h4>
+      <p>Vertel hoe dingen toegepast moeten worden.</p>
+
+      <h3>Hoe kan ik het logo gebruiken op verschillende achtergronden?</h3>
+      <p>Dit is de richtlijn en een aantal voorbeelden voor het toepassen van het logo op verschillende achtergronden
+      </p>
+      <h4>Niet doen</h4>
+      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
     </section>
 
+    <section id="heading3">
+      <h2>Heading3</h2>
+
+      <h3>Header</h3>
+      <h4>Wel doen</h4>
+      <p>Vertel hoe dingen toegepast moeten worden.</p>
+
+      <h4>Niet doen</h4>
+      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
+    </section>
+    
+    <section id="heading4">
+      <h2>Heading4</h2>
+
+      <h3>Header</h3>
+      <h4>Wel doen</h4>
+      <p>Vertel hoe dingen toegepast moeten worden.</p>
+
+      <h4>Niet doen</h4>
+      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
+    </section>
+
+    <section id="heading5">
+      <h2>Heading5</h2>
+
+      <h3>Header</h3>
+      <h4>Wel doen</h4>
+      <p>Vertel hoe dingen toegepast moeten worden.</p>
+
+      <h4>Niet doen</h4>
+      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
+    </section>
   </main>
 
   <script src="index.js"></script>

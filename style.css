@@ -3,13 +3,13 @@
   margin: 0;
   padding: 0;
 }
-
-html{
+ 
+html {
   /* padding-top toegevoegd door de fixed header (het valt er anders achter) */
   scroll-padding-top: 13vh;
   scroll-behavior: smooth;
 }
-
+ 
 body {
   display: flex;
   flex-direction: column;
@@ -18,86 +18,542 @@ body {
   line-height: 1.5;
   color: black;
 }
-
+ 
 header {
-  position: fixed;
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  width: 100%;
-  background-color: white;
-  color: silver;
-  border-bottom: 2px solid #F26F21;
-}
-
-header > h1 {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.logoTemplate{
-  width: 13%;
-  /* width: 1.125rem clamp(1rem, calc(120 / 1440 * 100vw), 1rem); */
-  margin-left: 4vw;
-}
-
-nav{
-  top: 0;
-  border-right: #F26F21 solid 3px;
-  width: 20%;
-  position: fixed;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  background-color: #333467;
+  width: 20%;
+  height: 100%;
+  border-right: #F26F21 solid 5px;
+  padding-top: 50px;
+  color: white;
 }
-
-nav ul{
-  margin-top: 12vh;
+ 
+.logo-en-tekst {
+  padding-bottom: 30px;
+  line-height: 1.15;
+  margin-left: -25px;
 }
-
+ 
+.logo-en-tekst>p {
+  opacity: 0.5;
+}
+ 
+.logo-template {
+  width: 130px;
+  /* width: 1.125rem clamp(1rem, calc(120 / 1440 * 100vw), 1rem); */
+}
+ 
 nav li {
   list-style-type: none;
-  padding-top: 2.5vh;
+  padding-top: 1vh;
 }
-
+ 
 nav li a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
-  color: #333467;
-  font-weight: bold;
+  color: #ffffff;
+  font-weight: light;
   align-self: flex-start;
+  display: block;
+  padding: 10px 60px 10px 10px;
 }
-
-nav a.active {
-  color: #F26F21;
+ 
+.active {
+  color: white;
+  background-color: #9191ae;
+  border-radius: 5px;
 }
-
-main{
-  margin-top: 15vh;
+ 
+main {
   margin-left: 25vw;
+  margin-right: 8vw;
   margin-bottom: 3vh;
 }
-
+ 
 section {
-  width: min(100%, 55rem);
-  color: #ffff;
-  background: #333467;
-  padding: 1rem;
+  margin: 100px;
+  color: #727272;
+  background: #ffffff;
+  padding-bottom: 100px;
+  border-bottom: #dfdfdf solid 3px;
 }
-
-/* elke section na de eerste heeft een margin top 1rem */
-section + section {
-  margin-top: 1rem;
+ 
+/* INTRODUCTION */
+.section-introduction > p{
+  width: 90%;
+  margin-top: 2vh;
 }
-
+ 
+.h1-introduction{
+  color: #333467;
+  font-size: 32px;
+}
+ 
+.important-introduction{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+ 
+.important-introduction > li{
+  width: 95%;
+}
+/* INTRODUCTION END */
+ 
+section>h2 {
+  color: #333467;
+  font-size: 26px;
+}
+ 
 h2 {
-  border-bottom: #ffff 2px solid;
+  border-bottom: #ffffff 2px solid;
   margin-bottom: 1rem;
 }
+ 
+/* header */
+.fotos-header-onderdeel-desktop{
+  width: 650px;
+}
+/* header end */
+ 
+/* iCONS END */
+.icons {
+  border-left: 7px solid #9191ae;
+  padding: 1em;
+}
+.simpelIcon{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1em;
+  grid-row: 225px 175px;
+}
+ 
+.text-icons {
+  padding-bottom: 1em;
+}
+ 
+.item img {
+  width: 5em;
+  height: 5em;
+  padding: 0.5em;
+}
+ 
+.item img:hover {
+  box-shadow: #88a5bf7a 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: .5em;
+}
+/* ICONS END */
+ 
+/*TYPOGRAFIE*/
+.typografie-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+ 
+.typografie-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+ 
+.typografie-box h3{
+  padding-bottom: 1em;
+}
+ 
+.typografie-box > ul{
+  list-style-type: none;
+}
+ 
+.basis-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+ 
+.basis-text div, .highlighted-text div{
+  width: 6rem;
+  padding-bottom: 1rem;
+}
+ 
+.text-text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #333467;
+}
+ 
+.text-alignment{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 20rem;
+}
+/* TYPOGRAFIE END */
+ 
+/* FROM: Hier wordt het kopje "Tekst input" weergegeven */
+ 
+.container-anatomy-1,
+.container-anatomy-2 {
+ display: flex;
+ flex-direction: row;
+ padding: 1rem 0;
+}
+ 
+.container-anatomy-1 ol,
+.container-anatomy-2 ol {
+ padding: 6rem 6rem;
+}
+ 
+.img-anatomy {
+ background-color: #D6D6E1;
+ width: 400px;
+ height: 300px;
+ padding: 1rem;
+ border-radius: 5px
+}
+ 
+/* FORM: Hier wordt het Gebruik van de forms weergegeven */
+ 
+.container-wrapper {
+ display: flex;
+ flex-wrap: wrap;
+ list-style: none;
+ margin-top: 1rem;
+ gap: 2rem 0;
+ margin-bottom: 2rem;
+}
+ 
+.container-wrapper li  {
+ padding: 0 20px 0 10px
+}
+ 
+.img-wrapper  {
+ background-color: #D6D6E1;
+ width: 350px;
+ height: 300px;
+ padding: 1rem;
+ border-radius: 5px;
+ }
+ 
+.container-wrapper p {
+ max-width: 350px;
+}
+ 
+/* FORM: hier wordt displaying HTML & CSS weergegeven */
+.form-example-code-html,
+.form-example-code-css {
+ background-color: #D6D6E1;
+ width: 100%;
+ height: 32remx;
+ border-radius: 5px;
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+}
+ 
+/* FORM: hier playing HTML & CSS weergegeven */
+.form-code {
+ background-color: #D6D6E1;
+ width: 60%;
+ height: 32rem;
+ padding: 1rem;
+ border-radius: 5px;
+}
+ 
+.form-code input,
+textarea {
+ width: 100%;
+ padding: 10px 10px;
+ margin: 8px 0;
+ box-sizing: border-box;
+ border: 1px solid  #333467;
+ border-radius: 5px;
+ resize: none;
+}
+ 
+input, label, textarea {
+ display:block;
+}
+ 
+.form-code input:focus-visible {
+   outline: 2px solid #333467;
+   border-radius: 3px;
+}
+ 
+.form-code textarea:focus-visible {
+ outline: 2px solid #333467;
+ border-radius: 3px;
+}
+ 
+.form-button {
+   background-color: #333467;
+   border: none;
+   color: white;
+   padding: 16px 32px;
+   text-decoration: none;
+   border-radius: 5px;;
+   cursor: pointer;
+ }
+ 
+ .form-box {
+   text-align: center;
+   font-family: arial;
+   color: #515183;
+ }
 
-/* pre {
-  padding-left: 0.2rem;
-  background: DarkSlateGray;
+
+ 
+/* BUTTONS  */
+.gebruik1 {
+  width: 23em;
+}
+ 
+.btn-kader {
+  background-color: rgb(255, 255, 255);
+  height: 5.5rem;
+  width: 49em;
+  margin: 2rem;
+}
+ 
+.btn-kader button {
+  padding: 1em 3.8em 1em;
+  margin: 1.5em 0em 0em 3em;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+.btn1 {
+  background-color: #224D12;
   color: white;
 } */
+ 
+.btn2 {
+  background-color: white;
+  border-style: solid #224D12;
+  color: #224D12;
+}
+ 
+.btn3 {
+  background-color: rgba(34, 77, 18, 0.11);
+  border-style: solid #224D12;
+  color: #224D12;
+}
+ 
+.btn-plus {
+  width: 16em;
+  margin-left: 3em;
+}
+ 
+.btn-kader2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  height: 9.5rem;
+  width: 49em;
+  margin: 2rem;
+}
+ 
+.btn-ul {
+  color: black;
+  padding: 2.2rem 4rem 1rem;
+}
+ 
+.table2 {
+  width: 49em;
+  margin: 2rem;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+ 
+td {
+  padding: 0;
+  width: 12em;
+  padding: 1em;
+}
+/* BUTTONS END */
+ 
+/* TYPOGRAFIE */
+ 
+.text-alignment img{
+  width: 80%;
+}
+ 
+.highlighted-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+ 
+.highlighted-text-text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #333467;
+}
+ 
+.headings {
+  padding-bottom: 1rem;
+  width: 20rem;
+}
+ 
+.heading-alignment img{
+  width: 80%;
+}
+ 
+.heading-alignment p{
+  padding-bottom: 2rem;
+}
+ 
+table td,
+th {
+  padding-right: 1rem;
+  border-right: 2px solid #333467;
+}
+ 
+table td {
+  border-top: 2px solid #333467;
+  ;
+}
+ 
+table {
+  border-spacing: 0px;
+  padding-bottom: 1rem;
+}
+ 
+.duurzaamheid-text li{
+  color:#333467;
+}
+ 
+.duurzaamheid-text p{
+  font-size: 32pt;
+  font-weight: bold;
+}
+/*TYPOGRAFIE END*/
+ 
+/* KLEUR */
+.section-color>img:last-child {
+  padding-top: 50px;
+}
+/* KLEUR END */
+ 
+/* RESPONSIVE */
+.layout-text {
+  margin-top: 3vh;
+}
+/* RESPONSIVE END */
+ 
+/* BEELDGEBRUIK */
+.code-voorbeeld-beeldgebruik{
+  float:right;
+  padding-right: 90px;
+  padding-top: 30px;
+}
+ 
+.p-beeldgebruik{
+  padding-bottom: 30px;
+}
+ 
+.border-radius-image {
+  border-radius: 5px;
+  width: 30em;
+}
+ 
+.h4-beeldgebruik{
+  padding-top: 30px;
+}
+ 
+.p2-beeldgebruik{
+  padding-bottom: 20px;
+}
+ 
+.two-values-image {
+  border-radius: 30px 100px;
+  width: 30em;
+}
+/* BEELDGEBRUIK END */
+ 
+/* FOOTER */
+.footer-article {
+  display: flex;
+  justify-content: flex-start;
+}
+ 
+.footer-wel-doen {
+  border: 3px solid #333467;
+  border-radius: 1em;
+  width: 40%;
+  padding: 1vw;
+  margin-right: 5vw;
+}
+ 
+.wel-doen-blaadje {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+ 
+.wel-doen-blaadje img {
+  width: 100px;
+  margin-right: 1vw;
+}
+/* FOOTER END */
+ 
+/* MEDIA QUERY VOOR HELE PAGINA */
+@media screen and (max-width: 60em) {
+  header {
+    display: none;
+  }
+ 
+  main {
+    margin: 1vh 2%;
+    margin-bottom: 3vh;
+  }
+  section {
+    margin: 0;
+  }
+  .form-visible-code {
+    width: 100%;
+}
+.form-onvisible-html pre{
+  line-height: normal;
+  overflow-x: scroll;
+ 
+}
+.container-text-input, .container-text-area {
+display: inline;
+  flex-direction: row;
+  padding: 1rem 0;
+}
+.anatomie_img {
+  width: 100%;
+}
+.section-color img{
+  width: 100% !important;
+}
+.heading_alignment img, .text_alignment img {
+  width: 100%;
+}
+.typografie-table{
+  overflow-x:auto;
+}
+.footer-article {
+  display: block;
+}
+.footer-wel-doen {
+ 
+  width: 100%;
+}
+}
+ 
+/* MEDIA QUERY END */
+ 
+
