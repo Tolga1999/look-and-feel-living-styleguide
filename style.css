@@ -329,22 +329,33 @@ input, label, textarea {
 }
  
 .btn1 {
-  background-color: #224D12;
+  background-color: #333467;
   color: white;
-} */
- 
+} 
+
 .btn2 {
   background-color: white;
-  border-style: solid #224D12;
-  color: #224D12;
+  border-style: solid #333467;
+  color: #333467;
 }
  
 .btn3 {
-  background-color: rgba(34, 77, 18, 0.11);
-  border-style: solid #224D12;
-  color: #224D12;
+  background-color: #33346727;
+  border-style: solid #333467;
+  color: #333467;
 }
- 
+
+button:hover {
+  background-color:#F26F21;
+}
+
+.btn2:hover{
+  color: white;
+}
+
+.btn3:hover{
+  color: white;
+}
 .btn-plus {
   width: 16em;
   margin-left: 3em;
@@ -360,7 +371,6 @@ input, label, textarea {
 }
  
 .btn-ul {
-  color: black;
   padding: 2.2rem 4rem 1rem;
 }
  
@@ -369,14 +379,35 @@ input, label, textarea {
   margin: 2rem;
   padding: 0;
   background-color: white;
-  color: black;
 }
- 
+
+.td-button {
+  border-color: #ffffff;
+}
+
+.th-button{
+  border-color: #ffffff;
+}
 td {
   padding: 0;
   width: 12em;
   padding: 1em;
 }
+
+.p-button{
+  margin-bottom: 1em;
+}
+
+.code-revieuw{
+  background-color: #D6D6E1;
+  width: 100%;
+  height: 32remx;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
 /* BUTTONS END */
  
 /* TYPOGRAFIE */
@@ -443,6 +474,12 @@ table {
 .section-color>img:last-child {
   padding-top: 50px;
 }
+
+.section-color > h3 {
+padding-top: 50px;
+
+}
+
 /* KLEUR END */
  
 /* RESPONSIVE */

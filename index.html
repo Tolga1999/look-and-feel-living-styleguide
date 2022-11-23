@@ -120,26 +120,500 @@
       <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
     </section>
 
-    <section id="heading3">
-      <h2>Heading3</h2>
+    <section class="section-color" id="kleur">
+      <h2>Kleur</h2>
+      <p>
+        Kleuren brengen onze merkpersoonlijkheid en waarden over, maar helpen gebruikers ook om door de interface te
+        navigeren. De juiste combinatie van kleuren kan van invloed zijn op hoe ze zich voelen, denken en gedragen. Zie
+        hieronder meer informatie over ons kleurgebruik.
 
-      <h3>Header</h3>
-      <h4>Wel doen</h4>
-      <p>Vertel hoe dingen toegepast moeten worden.</p>
-
-      <h4>Niet doen</h4>
-      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
+      <H3>Primaire kleuren:</H3> 
+      <p>Wit 45% en Groen 40%</p> 
+      <H3>Secundaire kleuren:</H3> 
+      <p>Blauw 10% en Oranje 5%</p> 
+      <img src="assets/color-cirkel-buurtcampus.png" width=30% alt="Kleur Cirkel">
+      <p>
+        Groen, blauw, wit en oranje vormen het kernkleurenpalet van de PlantSwap. We gebruiken ze voornamelijk voor
+        achtergronden, inhoud, om belangrijke elementen of oproepen tot actie te benadrukken.
+      </p>
+      <img src="assets/color-schedule-buurtcampus.png" width=50% alt="Kleur Schema">
     </section>
-    
-    <section id="heading4">
-      <h2>Heading4</h2>
 
-      <h3>Header</h3>
+    <!-- Content forms -->
+    <section id="formulieren">
+      <h2>Formulier</h2>
+
+  <h3>Tekst input</h3>
+  <p>Een tekstinvoer is een veld waarin gebruikers tekst kunnen invoeren</p>
+  <br>
+  <h4>Anatomie</h4>
+  <p>Tekstinvoer kan gebruikersinvoer op twee verschillende manieren weergeven:</p>
+  <br>
+  <li><b><em>Tekstinvoer met een enkele regel tekst</em></b></li>
+
+  <div class="container-anatomy-1">
+    <img class="img-anatomy" src="assets/forms/anatomy-1.svg"/>
+    <ol>
+      <li>Container</li>
+      <li>Label</li>
+      <li>Placeholder / Input text (optional)</li>
+    </ol>
+  </div>
+
+  <li><b><em>Tekstgebied met meerdere regels tekst in een tekstinvoer met vaste hoogte</em></b></li>
+  <div class="container-anatomy-2">
+    <img class="img-anatomy" src="assets/forms/anatomy-2.png" />
+    <ol>
+      <li>Container</li>
+      <li>Label</li>
+      <li>Placeholder</li>
+      <li>Counter</li>
+    </ol>
+  </div>
+
+  <h4>Gebruik</h4>
+  <p>Vertel hoe dingen toegepast moeten worden.</p>
+  <ul class="container-wrapper">
+    <li><img class="img-wrapper" src="assets/forms/label.svg"/>
+      <p><b>Label</b></p>
+      <p>Vermijd het maskeren van het label: houd het label altijd zichtbaar).</p>
+    </li>
+    <li> <img class="img-wrapper" src="assets/forms/width.svg"/>
+      <p><b>Breedte & Nabijheid</b></p>
+      <p>Gebruik visuele nabijheid.</p>
+    </li>
+    <li> <img class="img-wrapper" src="assets/forms/auto-focus.svg"/>
+      <p><b>Auto-focus</b></p>
+      <p>Automatische scherpstelling instellen.</p>
+    </li>
+    <li> <img class="img-wrapper" src="assets/forms/layout.svg"/>
+      <p><b>Layout</b></p>
+      <p>Plaats tekstinvoer op dezelfde regel als de totale breedte past in de schermbreedte en als de invoer
+        gekoppeld is.
+        Gebruik breedte als afbetaling (zoals postcode voorbeeld</p>
+    </li>
+  </ul>
+
+    <h4>HTML Code</h4>
+      <pre class="form-example-code-html">
+        <code>
+          &lt;form method="POST" class="form-code">&lt;/form&gt;
+           &lt;p&gt;&lt;label&gt;Naam:
+            &lt;input name="name" required autocomplete="send name"&gt;&lt;/label&gt;&lt;/p&gt;
+             &lt;p&gt;&lt;label&gt;Achternaam:
+            &lt;input name="family-name" required autocomplete="send family-name"&gt;&lt;/label&gt;&lt;/p&gt;
+             &lt;p&gt;&lt;label&gt;Telefoonnummer:
+            &lt;input type=tel name="tel" autocomplete="send tel"&gt;&lt;/p&gt;
+             &lt;p&gt;&lt;label&gt;E-mail:
+            &lt;input type="email" required autocomplete="send email">&lt;/label&gt;&lt;/p&gt;
+             &lt;p&gt;&lt;label&gt;Schrijf je E-mail
+            &lt;textarea name="text" rows="4" minlength=18 maxlength=200>Hoi, buurtgenoot!
+            &lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;
+              &lt;title&gt;Verstuur email</title>
+             &lt;p class="form-box"&gt;&lt;button class="form-button"type="submit">Verstuur E-mail
+             &lt;/button&gt;&lt;/p&gt;
+         &lt;/form&gt;
+        </code>
+      </pre>
+  
+      <h4>CSS code</h4>
+      <pre class="form-example-code-css">
+      <code>
+        .form-code {
+          background-color: #D6D6E1;
+          width: 60%;
+          height: 32rem;
+          padding: 1rem;
+          border-radius: 5px;
+        }
+       
+        .form-code input,
+         textarea {
+          width: 100%;
+          padding: 10px 10px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1px solid  #333467;
+          border-radius: 5px;
+          resize: none;
+        }
+       
+        input, label, textarea {
+          display:block;
+        }
+       
+        .form-code input:focus-visible {
+            outline: 2px solid #333467;
+            border-radius: 3px;
+        }
+       
+        .form-code textarea:focus-visible {
+          outline: 2px solid #333467;
+          border-radius: 3px;
+        }
+       
+         .form-button {
+            background-color: #333467;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 5px;;
+            cursor: pointer;
+          }
+       
+          .form-box {
+            text-align: center;
+            font-family: arial;
+            color: #515183;
+          }
+      </code>
+    </pre>
+    </div>
+    <h4>Visuele HTML & CSS code</h4>
+    <form method="POST" class="form-code">
+      <p>
+        <label>Naam:
+          <input name="name" required autocomplete="send name">
+        </label>
+      </p>
+      <p>
+        <label>Achternaam:
+          <input name="family-name" required autocomplete="send family-name">
+        </label>
+      </p>
+      <p>
+        <label>Telefoonnummer:
+          <input type=tel name="tel" autocomplete="send tel">
+        </label>
+      </p>
+      <p>
+        <label>E-mail:
+          <input name="email" required autocomplete="send email">
+        </label>
+      </p>
+      <p>
+        <label>Schrijf je E-mail
+          <textarea name="text" rows="4" minlength=18 maxlength=200>Hoi, buurtgenoot!</textarea>
+        </label>
+      </p>
+    
+      <p class="form-box">
+        <title>Verstuur email</title>
+        <button class="form-button" type="submit">Verstuur E-mail</button>
+      </p>
+    </form>
+    </section>
+
+    <section id="responsive">
+      <h2>Responsive bij lagere resoluties</h2>
+
+      <h3>Interactieve Elementen</h3>
       <h4>Wel doen</h4>
-      <p>Vertel hoe dingen toegepast moeten worden.</p>
+      <p>Maak van de tab/menu een button die in en uitgeschoven kan worden.</p>
+      <p>Behoud grofweg dezelfde layout van de website</p>
 
       <h4>Niet doen</h4>
-      <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
+      <p>Behoud niet de hele nav, hierdoor neemt het te veel ruimte in.</p>
+      <p>Maak niet een volledig andere layout zodat het niet een heel andere website is op lagere resoluties, het moet
+        consistent blijven
+      </p>
+
+      <h3 class="layout-text">Layout</h3>
+      <h4>Wel doen</h4>
+      <p>Maak de ruimte die de afbeeldingen innemen kleiner, verwijder zonodig een aantal afbeeldingen</p>
+
+      <h4>Niet doen</h4>
+      <p>Meerdere afbeeldingen naast elkaar zetten in de breedte, dit kan ervoor zorgen dat de pagina niet genoeg ruimte heeft
+        (afbeeldingen maken een te groot deel uit van de
+        pagina).</p>
+    </section>
+
+    <section id="beeldgebruik">
+      <h2>Beeldgebruik</h2>
+
+      <h4>Wel doen</h4>
+      <p class="p-beeldgebruik">De meeste afbeeldingen zullen van stekjes en planten zijn. Verder zal er veel gebruik gemaakt word van groene
+        kleuren die passen bij de huisstijl.
+        Om afbeeldingen afgeronde hoeken te geven word er gebruik gemaakt van een one - value border radius:
+      <pre class="code-voorbeeld-beeldgebruik">
+          <code>
+            <p>
+              .border-radius-image {
+               border-radius: 5px;
+               width: 20em;
+               padding-bottom: 30px;
+              }
+            </p>
+          </code>
+        </pre>
+      <img class="border-radius-image" src="assets/stekjes-workshop.jpeg" alt="image-borderradius">
+
+      <h4 class="h4-beeldgebruik">Niet doen</h4>
+      <p class="p2-beeldgebruik">We maken geen gebruikt van two, tree of four values. Dit is dat je bepaalde hoeken wel afrond, en sommige
+        vierkant laat. Het volgende voorbeeld
+        is een two values border-radius:</p>
+      <br>
+      <img class="two-values-image" src="assets/stekjes-workshop.jpeg" alt="image-twovauleusborderradius">
+    </section>
+
+    <section id="typografie">
+      <h2>Typografie</h2>
+
+      <article class="typografie-box">
+        <h3>Basis Text</h3>
+        <div class="basis-text">
+
+          <div class="text-family">
+            <h4>Family</h4>
+            <p>Arial</p>
+          </div>
+
+          <div class="text-size">
+            <h4>Size</h4>
+            <p>1rem</p>
+            <p>16px</p>
+          </div>
+
+          <div class="text-lineheight">
+            <h4>Line Height</h4>
+            <p>140%</p>
+          </div>
+
+          <div class="text-color">
+            <h4>Color</h4>
+            <p>#333467</p>
+          </div>
+
+          <div class="text-text">
+            <p>Grumpy wizards make a toxic brew for the jovial queen.</p>
+          </div>
+        </div>
+
+        <h3>Highlighted Text</h3>
+        <div class="highlighted-text">
+
+          <div class="text-family">
+            <h4>Family</h4>
+            <p>Arial (Bold)</p>
+          </div>
+
+          <div class="text-size">
+            <h4>Size</h4>
+            <p>1.2rem</p>
+            <p>19px</p>
+          </div>
+
+          <div class="text-lineheight">
+            <h4>Line Height</h4>
+            <p>150%</p>
+          </div>
+
+          <div class="color">
+            <h4>Color</h4>
+            <p>#333467</p>
+          </div>
+
+          <div class="highlighted-text-text">
+            <p>Grumpy wizards make a toxic brew for the jovial queen.</p>
+          </div>
+        </div>
+
+        <h3>Text-Alignment</h3>
+        <div class="text-alignment">
+          <img src="assets/text_alignment.png">
+          <p>Normale text dient <b>links</b> uitgelijnd te worden, met een maximale regellengte van <b>30rem</b></p>
+        </div>
+      </article>
+
+      <article class="typografie-box">
+        <div class="headings">
+          <h4>Headings</h4>
+
+          <div class="heading-alignment">
+            <img src="assets/heading_alignment.png">
+            <p>Headings dienen <b>gecentreerd</b> boven text of elementen geplaatst te worden.</p>
+          </div>
+       <div class="typografie-table">
+          <table>
+            <tr>
+              <th>Heading</th>
+              <th>h1</th>
+              <th>h2</th>
+              <th>h3</th>
+              <th>h4</th>
+              <th>h5</th>
+              <th>h6</th>
+            </tr>
+            <tr>
+              <td>Size</td>
+              <td>32pt</td>
+              <td>26pt</td>
+              <td>22pt</td>
+              <td>20pt</td>
+              <td>18pt</td>
+              <td>16pt</td>
+            </tr>
+          </table></div>
+          <p>Headings dienen volgens semantische volgorde de aangegeven groottes te hebben.</p>
+        </div>
+
+        <ul class="duurzaamheid-text">
+          <li>
+            <p>Duurzaamheid</p>
+          </li>
+          <li>
+            <h2>Duurzaamheid</h2>
+          </li>
+          <li>
+            <h3>Duurzaamheid</h3>
+          </li>
+          <li>
+            <h4>Duurzaamheid</h4>
+          </li>
+          <li>
+            <h5>Duurzaamheid</h5>
+          </li>
+          <li>
+            <h6>Duurzaamheid</h6>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="icons">
+      <h2 class="heading-icons"> Icons </h2>
+      <h3 class="header-icons">Icons line</h3>
+      <p class="text-icons">
+        Elk icoon is gekozen om de bedoeling te communiceren en navigatie te vergemakkelijken. Ze
+        kunnen een opdracht, een bestand, een contactmethode, of een verzorg symboliseren voor de plantjes. Ze worden
+        ook gebruikt om algemene acties weer te geven, zoals navigatie en sociaal media symboliseren.
+      </p>
+      <p>Strook van de icons is: <strong>solid 1.5px</strong></p>
+      <blockquote class="icons">
+        <!-- content wordt toegevoegd met js -->
+        <div id="simpelIcon" class="simpelIcon"></div>
+      </blockquote>
+      <p>Download de icons vanuit deze website: <a href="https://thenounproject.com/">The Noun project</a></p>
+    </section>
+
+    <section id="buttons">
+      <h2>Buttons</h2>
+
+      <h3>Wel doen</h3>
+      <p class="p-button">
+        Een knop is een klikbaar element dat wordt gebruikt om een actie uit te voeren.
+        Het bevat een tekstlabel en er kan een ondersteunend pictogram worden weergegeven.
+      </p>  
+
+      <table class="table1">
+        <tr>
+          <td class="td-button">
+            <img class="gebruik1" src="./assets/btn-gebruik.png" alt="Gebruik1">
+            <p> Gebruik een knop om acties mogelijk te maken die belangrijk zijn voor een gebruiker.</p>
+          </td>
+          <td class="td-button">
+            <img class="gebruik1" src="./assets/btn-gebruik2.png" alt="Gebruik2">
+            <p>
+              Wanneer twee knoppen nauw worden gebruikt, moeten knoppen worden benadrukt.
+            </p>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Anatomie</h3>
+
+      <p>
+        Knoppen kunnen een combinatie van een duidelijk label en een pictogram/icoon bevatten, terwijl linkjes altijd
+        tekst zijn.
+      </p>
+
+      <article class="btn-kader2">
+        <img class="btn-plus" src="./assets/btn.png" alt="button">
+        <ul class="btn-ul">
+          <li>1. Container </li>
+          <li>2. Leidend / eindigend Icoon (optioneel)</li>
+          <li>3. Label</li>
+        </ul>
+      </article>
+
+
+      <h3>Opties</h3>
+
+      <p>
+        Hier is te zien dat we de buttons onderscheiden doormiddel het achtergrond kleur 
+        op verschillende manieren te tonen, zo kunnen we de nadruk leggen welke echt van belang is en welke minder.
+      </p>
+
+      <article class="btn-kader">
+        <button class="btn1"> Primary button</button>
+        <button class="btn2"> Secondary button</button>
+        <button class="btn3"> Tertiary button</button>
+      </article>
+
+      <table class="table2">
+        <tr>
+          <th class="th-button">Primary</th>
+          <th class="th-button">Secondary</th>
+          <th class="th-button">Tertiary</th>
+        </tr>
+
+        <tr>
+          <td class="td-button">
+            De button wordt <strong>eenmaal</strong> per weergave gebruikt. Het wordt gebruikt wanneer een actie
+            duidelijk belangrijker
+            is dan de ander.
+          </td>
+          <td class="td-button">
+            De secundaire knop is de standaardknop voor de meeste gebruikssituaties. De geschetste styling legt minder
+            nadruk op deze knoppen.
+          </td>
+          <td class="td-button">
+            De tertiaire knop wordt meestal gebruikt voor diverse acties: de actie is belangrijk, maar is misschien niet
+            wat de gebruiker op dat moment wil doen.
+          </td>
+        </tr>
+      </table>
+
+      <h3> HTML-Voorbeeld</h3>
+      
+      <div class="code-revieuw"> 
+        <pre>
+          <code>
+            &lt;article class="btn-kader"&gt;
+            &lt;button class="btn1"&gt; Primary button&lt;/button&gt;
+            &lt;button class="btn2"&gt; Secondary button&lt;/button&gt;
+            &lt;button class="btn3"&gt; Tertiary button&lt;/button&gt;
+            &lt;/article&gt;
+          </code>
+        </pre>
+      </div>
+
+      <h3> CSS-Voorbeeld</h3>
+      
+      <div class="code-revieuw"> 
+        <pre>
+          <code>
+            .btn1 {
+              background-color: #333467;
+              color: white;
+            } 
+            
+            .btn2 {
+              background-color: white;
+              border-style: solid #333467;
+              color: #333467;
+            }
+            
+            .btn3 {
+              background-color: #33346727;
+              border-style: solid #333467;
+              color: #333467;
+            }
+          </code>
+        </pre>
+      </div>
+
     </section>
 
     <section id="heading5">
