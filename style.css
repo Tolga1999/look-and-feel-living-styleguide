@@ -334,6 +334,10 @@ input, label, textarea {
 .gebruik1 {
   width: 23em;
 }
+
+.btn-opties-h3{
+  margin-top: 1.5rem;
+}
  
 .btn-kader {
   background-color: rgb(255, 255, 255);
@@ -353,17 +357,18 @@ input, label, textarea {
 .btn1 {
   background-color: #333467;
   color: white;
+  border: 2px solid #515183;
 } 
 
 .btn2 {
   background-color: white;
-  border-style: solid #333467;
   color: #333467;
+  border: 2px solid #333467;
 }
  
 .btn3 {
   background-color: #33346727;
-  border-style: solid #333467;
+  border: 2px solid #333467;
   color: #333467;
 }
 
@@ -371,13 +376,20 @@ button:hover {
   background-color:#F26F21;
 }
 
+.btn1:hover{
+  border: 2px solid #F26F21;
+}
+
 .btn2:hover{
   color: white;
+  border: 2px solid #F26F21;
 }
 
 .btn3:hover{
   color: white;
+  border: 2px solid #F26F21;
 }
+
 .btn-plus {
   width: 16em;
   margin-left: 3em;
